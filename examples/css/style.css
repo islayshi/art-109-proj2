@@ -1,12 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
 
 body {
-  margin: 200;
   font-family: 'Roboto Mono', monospace;
+  background-color: #3e484f;
 }
 
 h1 {
   text-align: center;
+  color: white;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+}
+
+a {
+  text-align: center;
+  color: #c4e0f5;
+  display:block;
 }
 
 /* Scale canvas with resize attribute to full size */
