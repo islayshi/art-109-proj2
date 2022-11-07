@@ -10,10 +10,16 @@
   <script type="text/javascript" src="/dist/paper-full.js"></script>
   <script type="text/paperscript" canvas="canvas1">
 
-    var baseRectangle = new Rectangle(new Point(50, 50), new Point(1000, 500));
+  var baseRectangle = new Rectangle(new Point(50, 50), new Point(1000, 500));
   var path = new Path.Rectangle(baseRectangle);
   path.fillColor = '#e9e9ff';
   path.selected = true;
+
+  var menuRect = new Rectangle(new Point(210, 160), new Point(390, 340));
+  var path1 = new Path.Rectangle(menuRect);
+  path1.strokeColor = '#3689f5';
+  path1.strokeCap = 'round';
+  path1.strokeWidth = 4;
 
   // line at the bottom
   var from = new Point(150, 450);
@@ -62,8 +68,32 @@
   raster.position = new Point(300, 250);
   raster.scale(0.25);
 
+  raster.onMouseEnter = function(event){
+    raster.scale(1.2);
+  }
 
+  raster.onMouseLeave = function(event){
+    raster.scale(1/1.2);
+  }
 
+  // TEXT DESCRIPTION
+  var title = new PointText(new Point(500, 180));
+  title.content = 'Splatoon 3';
+  title.style = {
+    fontFamily: 'Verdana',
+    fontSize: 25,
+    fillColor: 'black',
+    justification: 'center'
+  };
+
+  var desc = new PointText(new Point(500, 210));
+  desc.content = 'Splatoon 3 \nnerd';
+  desc.style = {
+    fontFamily: 'Verdana',
+    fontSize: 15,
+    fillColor: 'black',
+    justification: 'left'
+  };
 
   </script>
 
@@ -127,7 +157,8 @@
 
 
 
-  <canvas id="canvas1" resize></canvas>
+  <canvas id="canvas1" resize> </canvas>
+
 
   <canvas id="canvas2" resize></canvas>
 
