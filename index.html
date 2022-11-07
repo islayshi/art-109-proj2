@@ -86,11 +86,11 @@
     justification: 'center'
   };
 
-  var desc = new PointText(new Point(500, 210));
-  desc.content = 'Splatoon 3 \nnerd';
+  var desc = new PointText(new Point(420, 210));
+  desc.content = 'Splatoon 3 is my first Splatoon game! \nFor the longest time this franchise was just something my friends and other peers \nwould play. I originally had no interest (although I did maintain respect for it).\nIt\'s been nothing but a blast so far for me. I love the diversity of weapons, the \ngame modes are fun, and the controls, although different, still are responsive and tight.\n\nWould absolutely reccomend!';
   desc.style = {
     fontFamily: 'Verdana',
-    fontSize: 15,
+    fontSize: 12,
     fillColor: 'black',
     justification: 'left'
   };
@@ -99,10 +99,16 @@
 
   <script type="text/paperscript" canvas="canvas2">
 
-    var baseRectangle = new Rectangle(new Point(50, 50), new Point(1000, 500));
+  var baseRectangle = new Rectangle(new Point(50, 50), new Point(1000, 500));
   var path = new Path.Rectangle(baseRectangle);
   path.fillColor = '#e9e9ff';
   path.selected = true;
+
+  var menuRect = new Rectangle(new Point(210, 160), new Point(390, 340));
+  var path1 = new Path.Rectangle(menuRect);
+  path1.strokeColor = '#3689f5';
+  path1.strokeCap = 'round';
+  path1.strokeWidth = 4;
 
   // line at the bottom
   var from = new Point(150, 450);
@@ -146,6 +152,127 @@
   batteryEnd.fillColor = '#4DF585';
 
   // load menu icon
+  // Create a raster item using the image tag with id='mona'
+  var raster = new Raster('games/fe3h.jpg');
+  raster.position = new Point(300, 250);
+  raster.scale(0.17);
+
+  raster.onMouseEnter = function(event){
+    raster.scale(1.2);
+  }
+
+  raster.onMouseLeave = function(event){
+    raster.scale(1/1.2);
+  }
+
+  // TEXT DESCRIPTION
+  var title = new PointText(new Point(600, 180));
+  title.content = 'Fire Emblem: Three Houses';
+  title.style = {
+    fontFamily: 'Verdana',
+    fontSize: 25,
+    fillColor: 'black',
+    justification: 'center'
+  };
+
+  var desc = new PointText(new Point(420, 210));
+  desc.content = 'Despite being a Fire Emblem fan prior, I actually had lower expectations. \nNeedless to say I\'m glad I ended up eating my own thoughts. Great storytelling, \nthe art direction eventually warmed up to me, and probably the most ambitious \nFire Emblem game to date. \n\nI would even say it is a great entryway to the franchise, it won\'t \ndisappoint RPG fans!';
+  desc.style = {
+    fontFamily: 'Verdana',
+    fontSize: 12,
+    fillColor: 'black',
+    justification: 'left'
+  };
+
+  </script>
+
+
+  <script type="text/paperscript" canvas="canvas3">
+
+  var baseRectangle = new Rectangle(new Point(50, 50), new Point(1000, 500));
+  var path = new Path.Rectangle(baseRectangle);
+  path.fillColor = '#e9e9ff';
+  path.selected = true;
+
+  var menuRect = new Rectangle(new Point(210, 160), new Point(390, 340));
+  var path1 = new Path.Rectangle(menuRect);
+  path1.strokeColor = '#3689f5';
+  path1.strokeCap = 'round';
+  path1.strokeWidth = 4;
+
+  // line at the bottom
+  var from = new Point(150, 450);
+  var to = new Point(850, 450);
+  var path = new Path.Line(from, to);
+  path.strokeColor = '#BCBCBC';
+
+  var commCircle = new Path.Circle(new Point(300, 400), 30);
+  commCircle.fillColor = 'white';
+
+  var shopCircle = new Path.Circle(new Point(400, 400), 30);
+  shopCircle.fillColor = 'white';
+
+  var photoCircle = new Path.Circle(new Point(500, 400), 30);
+  photoCircle.fillColor = 'white';
+
+  var settingsCircle = new Path.Circle(new Point(600, 400), 30);
+  settingsCircle.fillColor = 'white';
+
+  var settingsCircle = new Path.Circle(new Point(600, 400), 30);
+  settingsCircle.fillColor = 'white';
+
+  var powerCircle = new Path.Circle(new Point(700, 400), 30);
+  powerCircle.fillColor = 'white';
+
+  var text = new PointText(new Point(800, 100));
+  text.content = '3:21 PM';
+  text.style = {
+    fontFamily: 'Verdana',
+    fontSize: 20,
+    fillColor: 'black',
+    justification: 'center'
+  };
+
+  // battery icon
+  var battery = new Rectangle(new Point(870, 83), new Point(905, 102));
+  var pathBattery = new Path.Rectangle(battery);
+  pathBattery.fillColor = '#4DF585';
+  var batteryEnd = new Rectangle(new Point(870, 86), new Point(910, 100));
+  var batteryEnd = new Path.Rectangle(batteryEnd);
+  batteryEnd.fillColor = '#4DF585';
+
+  // load menu icon
+  // Create a raster item using the image tag with id='mona'
+  var raster = new Raster('games/p5s.jpg');
+  raster.position = new Point(300, 250);
+  raster.scale(0.17);
+
+  raster.onMouseEnter = function(event){
+    raster.scale(1.2);
+  }
+
+  raster.onMouseLeave = function(event){
+    raster.scale(1/1.2);
+  }
+
+  // TEXT DESCRIPTION
+  var title = new PointText(new Point(540, 180));
+  title.content = 'Persona 5 Strikers';
+  title.style = {
+    fontFamily: 'Verdana',
+    fontSize: 25,
+    fillColor: 'black',
+    justification: 'center'
+  };
+
+  var desc = new PointText(new Point(420, 210));
+  desc.content = 'Not my first Persona game but my first hack and slash! It was good seeing \nthe same good old characters I was so fond of. Great music, the \ngameplay took a bit to get used to but I eventually learned to master it. \nThe best part is the dungeon crawling aspect in my opinion. Go play Persona 5';
+  desc.style = {
+    fontFamily: 'Verdana',
+    fontSize: 12,
+    fillColor: 'black',
+    justification: 'left'
+  };
 
   </script>
 
@@ -158,9 +285,8 @@
 
 
   <canvas id="canvas1" resize> </canvas>
-
-
-  <canvas id="canvas2" resize></canvas>
+  <canvas id="canvas2" resize> </canvas>
+  <canvas id="canvas3" resize> </canvas>
 
 </body>
 
