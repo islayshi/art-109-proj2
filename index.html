@@ -1,13 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Project 2 Prep 2 </title>
-  </head>
-  <body>
-    <h1> My Gaming Backlog </h1>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gaming Backlog</title>
+
+  <link rel="stylesheet" href="examples/css/style.css">
+  <script type="text/javascript" src="js/paper.js"></script>
+  <script type="text/javascript" src="/dist/paper-full.js"></script>
+  <script type="text/paperscript" canvas="canvas1">
+
+    var baseRectangle = new Rectangle(new Point(50, 50), new Point(1000, 500));
+  var path = new Path.Rectangle(baseRectangle);
+  path.fillColor = '#e9e9ff';
+  path.selected = true;
+
+  // line at the bottom
+  var from = new Point(150, 450);
+  var to = new Point(850, 450);
+  var path = new Path.Line(from, to);
+  path.strokeColor = '#BCBCBC';
+
+  var commCircle = new Path.Circle(new Point(300, 400), 30);
+  commCircle.fillColor = 'white';
+
+  var shopCircle = new Path.Circle(new Point(400, 400), 30);
+  shopCircle.fillColor = 'white';
+
+  var photoCircle = new Path.Circle(new Point(500, 400), 30);
+  photoCircle.fillColor = 'white';
+
+  var settingsCircle = new Path.Circle(new Point(600, 400), 30);
+  settingsCircle.fillColor = 'white';
+
+  var settingsCircle = new Path.Circle(new Point(600, 400), 30);
+  settingsCircle.fillColor = 'white';
+
+  var powerCircle = new Path.Circle(new Point(700, 400), 30);
+  powerCircle.fillColor = 'white';
+
+  var text = new PointText(new Point(800, 100));
+  text.content = '3:21 PM';
+  text.style = {
+    fontFamily: 'Verdana',
+    fontSize: 20,
+    fillColor: 'black',
+    justification: 'center'
+  };
+
+  // battery icon
+  var battery = new Rectangle(new Point(870, 83), new Point(905, 102));
+  var pathBattery = new Path.Rectangle(battery);
+  pathBattery.fillColor = '#4DF585';
+  var batteryEnd = new Rectangle(new Point(870, 86), new Point(910, 100));
+  var batteryEnd = new Path.Rectangle(batteryEnd);
+  batteryEnd.fillColor = '#4DF585';
+
+  // load menu icon
+  // Create a raster item using the image tag with id='mona'
+  var raster = new Raster('games/splatoon3.jpg');
+  raster.position = new Point(300, 250);
+  raster.scale(0.25);
 
 
 
-  </body>
+
+  </script>
+
+  <script type="text/paperscript" canvas="canvas2">
+
+    var baseRectangle = new Rectangle(new Point(50, 50), new Point(1000, 500));
+  var path = new Path.Rectangle(baseRectangle);
+  path.fillColor = '#e9e9ff';
+  path.selected = true;
+
+  // line at the bottom
+  var from = new Point(150, 450);
+  var to = new Point(850, 450);
+  var path = new Path.Line(from, to);
+  path.strokeColor = '#BCBCBC';
+
+  var commCircle = new Path.Circle(new Point(300, 400), 30);
+  commCircle.fillColor = 'white';
+
+  var shopCircle = new Path.Circle(new Point(400, 400), 30);
+  shopCircle.fillColor = 'white';
+
+  var photoCircle = new Path.Circle(new Point(500, 400), 30);
+  photoCircle.fillColor = 'white';
+
+  var settingsCircle = new Path.Circle(new Point(600, 400), 30);
+  settingsCircle.fillColor = 'white';
+
+  var settingsCircle = new Path.Circle(new Point(600, 400), 30);
+  settingsCircle.fillColor = 'white';
+
+  var powerCircle = new Path.Circle(new Point(700, 400), 30);
+  powerCircle.fillColor = 'white';
+
+  var text = new PointText(new Point(800, 100));
+  text.content = '3:21 PM';
+  text.style = {
+    fontFamily: 'Verdana',
+    fontSize: 20,
+    fillColor: 'black',
+    justification: 'center'
+  };
+
+  // battery icon
+  var battery = new Rectangle(new Point(870, 83), new Point(905, 102));
+  var pathBattery = new Path.Rectangle(battery);
+  pathBattery.fillColor = '#4DF585';
+  var batteryEnd = new Rectangle(new Point(870, 86), new Point(910, 100));
+  var batteryEnd = new Path.Rectangle(batteryEnd);
+  batteryEnd.fillColor = '#4DF585';
+
+  // load menu icon
+
+  </script>
+
+
+</head>
+
+<body>
+  <h1> Isla's Gaming Backlog </h1>
+
+
+
+  <canvas id="canvas1" resize></canvas>
+
+  <canvas id="canvas2" resize></canvas>
+
+</body>
 
 </html>
