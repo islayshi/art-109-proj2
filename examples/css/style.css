@@ -21,6 +21,18 @@ a {
   display:block;
 }
 
+p {
+  color: white;
+}
+
+div {
+  width: 500px;
+  border: 5px solid white;
+  padding: 50px;
+  margin: 20px;
+  margin: auto;
+}
+
 /* Scale canvas with resize attribute to full size */
 canvas{
   width: 100%;
